@@ -1,13 +1,15 @@
 /*******************************************************
  * Project:        RISC-V CPU Design
- * Module:         Single Cycle CPU Datapath
+ * Module:         Single Cycle CPU
  * Author:         Elliot Staresinic
- * Date:           2026-05-24
+ * Date:           2026-05-26
  *
  * Description:
- *   This module implements the datapath for a single
- *   cycle, RISC-V CPU. It takes as input control signals
- *   from the control unit as well as clk and reset. This
+ *   This module stitches together the datapath, main 
+ *   control unit, and ALU control unit to form the top
+ *   level module for a single cycle RISC-V CPU. This
+ *   module only takes as input clk and reset signals, 
+ *   and all other signals are internal. This
  *   implementation doesn't use any pipelining, and uses
  *   a Harvard architecture with separate instruction and 
  *   data memories. It can handle R-type, I-type, S-type,
@@ -23,18 +25,6 @@
  *   Inputs:
  *     clk        - clock
  *     reset      - asynchronous reset
- *     branch     - 3-bit one's hot encoded control signal
- *     memRead    - control signal to read data memory
- *     memToReg   - mux sel signal for load vs arithmetic
- *     operation  - 4-bit control signal for ALU from ALU CU
- *     memWrite   - control signal to write data memory
- *     ALUsrc     - mux sel signal to send immediate to ALU
- *     regWrite   - control signal to write register file
- *
- *  Outputs:
- *    opcode      - opcode field of instruction for control unit 
- *    funct3      - funct3 field of the instruction
- *    funct7_5    - 5th bit of the funct7 field of the instruction 
  *
  *******************************************************/
 
