@@ -2,6 +2,13 @@
 
 A centralized collection of RISC-V processor designs built from the ground up, documenting my summer of CPU architecture and digital design exploration. This repository brings together every stage of the hardware design flow — from register-transfer level (RTL) description through verification, and extending toward physical implementation.
 
+## Designs
+
+| Design | Status | Description |
+|--------|--------|-------------|
+| [Single-Cycle CPU](./single_cycle_cpu/) | Complete | RV32I single-cycle Harvard architecture, verified against a lockstep golden model and hand-derived final-state oracle |
+| Pipelined CPU | Planned | 5-stage pipeline with hazard detection and forwarding |
+
 ## What's Inside
 
 Each subdirectory contains a self-contained CPU design implementing the RV32I instruction set (or a working subset), progressing in complexity and microarchitectural sophistication. For every design you'll find:
@@ -10,10 +17,6 @@ Each subdirectory contains a self-contained CPU design implementing the RV32I in
 - **Testbenches** — self-checking verification environments, including lockstep golden-model comparison against independent reference simulators and hand-derived final-state oracles.
 - **Waveforms** — VCD dumps and simulation traces capturing cycle-by-cycle architectural behavior.
 - **Programs** — RISC-V machine-code test programs exercising arithmetic, logic, memory, and control-flow instructions.
-
-## Designs
-
-The collection spans multiple microarchitectures — beginning with a single-cycle implementation and expanding toward pipelined and more advanced organizations. Each design is verified in simulation before moving forward.
 
 ## Roadmap
 
@@ -30,4 +33,3 @@ Icarus Verilog for RTL simulation, GTKWave/EPWave for waveform inspection, and t
 ## About
 
 I built these projects to deepen my understanding of computer architecture and the complete digital design flow — from a line of Verilog to a physical layout. This repository serves as a portfolio of that work, intended to be easy for recruiters and collaborators to navigate.
-
