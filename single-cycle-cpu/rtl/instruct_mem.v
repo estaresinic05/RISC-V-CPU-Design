@@ -35,7 +35,7 @@ module instruct_mem #(
     for (i = 0; i < DEPTH; i = i + 1) begin
       memory[i] = 32'h00000013;  // NOP
     end
-    $readmemh("program.mem", memory);
+      $readmemh("programs/program.mem", memory);
   end
 
   assign instruction = (instAddress[31:2] < DEPTH) ? memory[instAddress[31:2]] : 32'b0;  //drop lower 2 bits for word aligned access
