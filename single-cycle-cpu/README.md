@@ -31,15 +31,18 @@ sc_cpu_top_level
     ├── instruct_mem        Read-only instruction memory (loaded from program.mem)
     ├── imm_gen             Immediate generator (I, S, SB, U, UJ formats)
     ├── reg_file            32x32-bit register file (2 read ports, 1 write port)
-    ├── mux_2x1             ALU source mux (register vs. immediate)
+    ├── mux_2x1             ALU source mux; write-back mux; branch/increment mux (×3)
     ├── alu_full            32-bit ALU (ripple-carry, parameterized)
     │   ├── alu_slice       1-bit ALU slice (bits [30:0])
+    │   │   ├── mux_2x1     Output select (ALU result vs. pass-through)
+    │   │   ├── mux_4x1     Operation select (add/sub, and, or, slt)
+    │   │   └── full_adder  1-bit full adder
     │   └── alu_msb         MSB ALU slice (overflow detection, setLess)
+    │       ├── mux_2x1     Output select (ALU result vs. pass-through)
+    │       ├── mux_4x1     Operation select (add/sub, and, or, slt)
+    │       └── full_adder  1-bit full adder (MSB, feeds overflow logic)
     ├── data_mem            Clocked data memory (word-aligned, read/write enable)
-    ├── mux_2x1             Write-back mux (ALU result vs. loaded word)
-    ├── ripple_carry_adder  PC + 4 adder
-    ├── ripple_carry_adder  PC + immediate adder (branch target)
-    └── mux_2x1             Branch/increment mux (next PC selection)
+    └── ripple_carry_adder  PC + 4 adder; PC + immediate adder (×2)
 ```
 
 ### Key Design Decisions
