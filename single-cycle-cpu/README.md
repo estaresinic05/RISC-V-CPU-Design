@@ -84,7 +84,8 @@ single_cycle_cpu/
 ├── programs/
 │   └── program.mem             30-instruction RV32I test program (hex)
 ├── waveforms/
-│   └── dump.vcd                Simulation waveform dump
+│   ├── dump.vcd                Simulation waveform dump
+│   └── waveform.jpg            Simulation waveform screenshot
 └── docs/
     └── architecture.jpg        Hand-drawn system architecture diagram
 ```
@@ -213,6 +214,10 @@ A passing run produces:
  RESULT: PASS - 0 errors. DUT == reference == oracle.
 ==================================================
 ```
+
+### Waveform
+
+![Simulation Waveform](waveforms/waveform.jpg)
 
 ---
 
