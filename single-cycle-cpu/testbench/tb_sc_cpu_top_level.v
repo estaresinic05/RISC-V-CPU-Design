@@ -420,7 +420,7 @@ module tb_sc_cpu_top_level;
     step_count  = 0;
 
     // Mirror the program image into the reference instruction memory
-    $readmemh("program.mem", ref_imem);
+    $readmemh("programs/program.mem", ref_imem);
     for (i = 0; i < 32; i = i + 1) ref_regs[i] = 32'h0;
     for (i = 0; i < DMEM_WORDS; i = i + 1) ref_dmem[i] = 32'h0;
     ref_pc = 32'h0;
