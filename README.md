@@ -6,7 +6,7 @@ A centralized collection of RISC-V processor designs built from the ground up, d
 
 | Design | Status | Description |
 |--------|--------|-------------|
-| [Single-Cycle CPU](./single_cycle_cpu/) | Complete | RV32I single-cycle Harvard architecture, verified against a lockstep golden model and hand-derived final-state oracle |
+| [Single-Cycle CPU](./single-cycle-cpu/) | Complete | RV32I single-cycle Harvard architecture, verified against a lockstep golden model and hand-derived final-state oracle |
 | Pipelined CPU | Planned | 5-stage pipeline with hazard detection and forwarding |
 
 ## What's Inside
