@@ -61,6 +61,7 @@ sc_cpu_top_level
 
 ```
 single_cycle_cpu/
+├── Makefile
 ├── README.md
 ├── rtl/
 │   ├── sc_cpu_top_level.v      Top-level module (control + datapath + ALU CU)
