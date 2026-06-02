@@ -202,7 +202,7 @@ iverilog -g2012 -o sim testbench/tb_sc_cpu_top_level.v rtl/sc_cpu_top_level.v rt
 vvp sim
 
 # View waveforms (GTKWave)
-gtkwave dump.vcd
+gtkwave waveforms/dump.vcd
 ```
 
 A passing run produces:
