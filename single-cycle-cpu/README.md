@@ -2,6 +2,8 @@
 
 A fully functional, single-cycle RV32I processor implemented in Verilog. Every stage of the classical datapath — fetch, decode, execute, memory, and write-back — completes within a single clock cycle. The design is verified by a self-checking testbench that runs a 30-instruction program and independently validates the result against a hand-derived oracle.
 
+---
+
 ## Architecture
 
 The processor follows a **Harvard architecture** with separate instruction and data memories. Control logic is purely combinational — no finite state machine is required in a single-cycle design. The datapath and control unit are connected through a dedicated ALU control unit that decodes `funct3` and `funct7` fields to generate the final 4-bit ALU operation signal.
@@ -60,7 +62,7 @@ sc_cpu_top_level
 ## File Structure
 
 ```
-single_cycle_cpu/
+single-cycle-cpu/
 ├── Makefile
 ├── README.md
 ├── rtl/
@@ -80,7 +82,7 @@ single_cycle_cpu/
 │   ├── mux_2x1.v               2x1 multiplexer
 │   └── mux_4x1.v               4x1 multiplexer
 ├── testbench/
-│   └── tb_sc_cpu_top_level.v    Self-checking lockstep testbench
+│   └── tb_sc_cpu_top_level.v   Self-checking lockstep testbench
 ├── programs/
 │   └── program.mem             30-instruction RV32I test program (hex)
 ├── waveforms/
@@ -175,9 +177,20 @@ The testbench also produces a per-instruction execution trace:
 
 ### Running the Simulation
 
-```bash
-# Compile (from the single-cycle-cpu/ root)
+**Option 1 — Makefile (recommended)**
 
+From the `single-cycle-cpu/` root:
+
+```bash
+make        # compile only
+make run    # compile and run
+```
+
+> Requires `make` to be installed. On Windows: `winget install GnuWin32.Make`
+
+**Option 2 — Manual compile**
+
+```bash
 # Linux / Mac
 iverilog -g2012 -o sim \
   testbench/tb_sc_cpu_top_level.v \
@@ -202,8 +215,11 @@ iverilog -g2012 -o sim testbench/tb_sc_cpu_top_level.v rtl/sc_cpu_top_level.v rt
 
 # Run
 vvp sim
+```
 
-# View waveforms (GTKWave)
+**View waveforms**
+
+```bash
 gtkwave waveforms/dump.vcd
 ```
 
@@ -227,6 +243,7 @@ A passing run produces:
 |------|---------|
 | Icarus Verilog 12.0 | RTL simulation |
 | GTKWave / EPWave | Waveform inspection |
+| GNU Make | Build automation |
 
 ---
 
