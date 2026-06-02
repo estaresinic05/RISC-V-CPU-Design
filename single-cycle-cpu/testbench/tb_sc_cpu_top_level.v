@@ -144,7 +144,7 @@ module tb_sc_cpu_top_level;
   // Waveform dump for EDA Playground EPWave
   // ----------------------------------------------------------------------
   initial begin
-    $dumpfile("dump.vcd");
+    $dumpfile("waveforms/dump.vcd");
     $dumpvars(0, tb_sc_cpu_top_level);
   end
 
