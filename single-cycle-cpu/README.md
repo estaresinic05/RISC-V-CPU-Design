@@ -79,7 +79,7 @@ single_cycle_cpu/
 │   ├── mux_2x1.v               2x1 multiplexer
 │   └── mux_4x1.v               4x1 multiplexer
 ├── testbench/
-│   └── tb_sc_single_cycle_cpu.v    Self-checking lockstep testbench
+│   └── tb_sc_cpu_top_level.v    Self-checking lockstep testbench
 ├── programs/
 │   └── program.mem             30-instruction RV32I test program (hex)
 ├── waveforms/
@@ -176,7 +176,7 @@ The testbench also produces a per-instruction execution trace:
 ```bash
 # Compile (from the single_cycle_cpu/ root)
 iverilog -g2001 -o sim \
-  testbench/tb_sc_single_cycle_cpu.v \
+  testbench/tb_sc_cpu_top_level.v \
   rtl/sc_cpu_top_level.v \
   rtl/sc_cpu_datapath.v \
   rtl/sc_cpu_control.v \
