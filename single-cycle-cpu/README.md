@@ -174,8 +174,10 @@ The testbench also produces a per-instruction execution trace:
 ### Running the Simulation
 
 ```bash
-# Compile (from the single_cycle_cpu/ root)
-iverilog -g2001 -o sim \
+# Compile (from the single-cycle-cpu/ root)
+
+# Linux / Mac
+iverilog -g2012 -o sim \
   testbench/tb_sc_cpu_top_level.v \
   rtl/sc_cpu_top_level.v \
   rtl/sc_cpu_datapath.v \
@@ -192,6 +194,9 @@ iverilog -g2001 -o sim \
   rtl/data_mem.v \
   rtl/mux_2x1.v \
   rtl/mux_4x1.v
+
+# Windows (PowerShell) — single line
+iverilog -g2012 -o sim testbench/tb_sc_cpu_top_level.v rtl/sc_cpu_top_level.v rtl/sc_cpu_datapath.v rtl/sc_cpu_control.v rtl/alu_control.v rtl/alu_full.v rtl/alu_msb.v rtl/alu_slice.v rtl/full_adder.v rtl/ripple_carry_adder.v rtl/reg_file.v rtl/imm_gen.v rtl/instruct_mem.v rtl/data_mem.v rtl/mux_2x1.v rtl/mux_4x1.v
 
 # Run
 vvp sim
