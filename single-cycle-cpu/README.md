@@ -66,30 +66,31 @@ single-cycle-cpu/
 ├── Makefile
 ├── README.md
 ├── rtl/
-│   ├── sc_cpu_top_level.v      Top-level module (control + datapath + ALU CU)
-│   ├── sc_cpu_datapath.v       Full datapath
-│   ├── sc_cpu_control.v        Main control unit
-│   ├── alu_control.v           ALU control unit
-│   ├── alu_full.v              32-bit parameterized ALU
-│   ├── alu_msb.v               MSB ALU slice (overflow, setLess)
-│   ├── alu_slice.v             1-bit ALU slice
-│   ├── full_adder.v            1-bit full adder
-│   ├── ripple_carry_adder.v    N-bit ripple carry adder
-│   ├── reg_file.v              32x32-bit register file
-│   ├── imm_gen.v               Immediate generator
-│   ├── instruct_mem.v          Read-only instruction memory
-│   ├── data_mem.v              Clocked data memory
-│   ├── mux_2x1.v               2x1 multiplexer
-│   └── mux_4x1.v               4x1 multiplexer
+│   ├── sc_cpu_top_level.v       Top-level module (control + datapath + ALU CU)
+│   ├── sc_cpu_datapath.v        Full datapath
+│   ├── sc_cpu_control.v         Main control unit
+│   ├── alu_control.v            ALU control unit
+│   ├── alu_full.v               32-bit parameterized ALU
+│   ├── alu_msb.v                MSB ALU slice (overflow, setLess)
+│   ├── alu_slice.v              1-bit ALU slice
+│   ├── full_adder.v             1-bit full adder
+│   ├── ripple_carry_adder.v     N-bit ripple carry adder
+│   ├── reg_file.v               32x32-bit register file
+│   ├── imm_gen.v                Immediate generator
+│   ├── instruct_mem.v           Read-only instruction memory
+│   ├── data_mem.v               Clocked data memory
+│   ├── mux_2x1.v                2x1 multiplexer
+│   └── mux_4x1.v                4x1 multiplexer
 ├── testbench/
-│   └── tb_sc_cpu_top_level.v   Self-checking lockstep testbench
+│   └── tb_sc_cpu_top_level.v    Self-checking lockstep testbench
 ├── programs/
-│   └── program.mem             30-instruction RV32I test program (hex)
+│   └── program.mem              30-instruction RV32I test program (hex)
 ├── waveforms/
-│   ├── dump.vcd                Simulation waveform dump
-│   └── waveform.jpg            Simulation waveform screenshot
+│   ├── dump.vcd                 Simulation waveform dump
+│   └── waveform.jpg             Simulation waveform screenshot
 └── docs/
-    └── architecture.jpg        Hand-drawn system architecture diagram
+    ├── design-verification-report.pdf    Design verification report
+    └── architecture.jpg                  Hand-drawn system architecture diagram
 ```
 
 ---
