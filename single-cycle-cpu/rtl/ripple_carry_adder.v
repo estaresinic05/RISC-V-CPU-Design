@@ -37,7 +37,7 @@ module ripple_carry_adder #(
 
   genvar i;
   generate
-    for (i = 0; i < N; i++) begin : FA_GEN
+      for (i = 0; i < N; i = i + 1) begin : FA_GEN
       full_adder fa_i (
           a[i],
           (b[i] ^ operation),
