@@ -2,8 +2,6 @@
 
 A parameterized, structural **N-bit Arithmetic Logic Unit** (default `N = 32`) built from 1-bit slices in the classic Patterson & Hennessy style. The least-significant `N-1` bits are `alu_slice` blocks chained as a ripple-carry adder, terminated by a dedicated `alu_msb` block that produces the overflow flag and the signed set-less-than signal. The design is fully combinational and verified by a self-checking testbench that applies directed edge-case vectors and validates `result`, `ovf`, and `zero` against an independent behavioral model.
 
-**Author:** Elliot Staresinic
-
 ---
 
 ## Architecture
