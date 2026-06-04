@@ -12,7 +12,7 @@
 
 ## What This Is
 
-**Silicon From Scratch** is a learning hub for anyone curious about what happens inside the chips that companies like AMD, Intel, Nvidia, and Apple design — and who would rather build one than just read about it. It gathers working processor designs, the fundamental logic blocks they're made from, and the simulation and verification that proves they actually work, all in one place you can clone, run, and take apart.
+**Silicon From Scratch** is a learning hub for anyone curious about how the processors inside modern devices are designed and built — and who would rather build one than just read about it. It gathers working processor designs, the fundamental logic blocks they're made from, and the simulation and verification that proves they actually work, all in one place you can clone, run, and take apart.
 
 The whole approach is built around one idea: **dive in.** You don't need a degree, an expensive software license, or anyone's permission to get started. Every core project here can be simulated on your own machine with free, open-source tools, and the material is written to be approachable for someone seeing it for the first time. Start with a single logic block, watch it come alive in a waveform, then climb your way up to a complete CPU.
 
