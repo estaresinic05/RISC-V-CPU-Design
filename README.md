@@ -1,10 +1,10 @@
 # Silicon From Scratch
 
+<img src="single-cycle-cpu/docs/logo.jpg" alt="Logo" width="220" align="right">
+
 A centralized collection of RISC-V processor designs and fundamental building blocks of digital design built from the ground up, documenting my summer of CPU architecture and VLSI design exploration. This repository brings together every stage of the hardware design flow — from register-transfer level (RTL) description, verification, and extending toward physical implementation. You don't learn to ride a bike by reading about it; you strap on your helmet and push off, finding your balance as you go, with hope that your leap into the unknown will take you to somewhere you couldn't have reached standing still.
 
-<p align="center">
-  <img src="single-cycle-cpu/docs/logo.jpg" alt="Logo" width="400">
-</p>
+<br clear="all">
 
 ## Contents
 
