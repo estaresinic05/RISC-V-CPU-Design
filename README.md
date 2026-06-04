@@ -2,11 +2,12 @@
 
 A centralized collection of RISC-V processor designs and fundamental building blocks of digital design built from the ground up, documenting my summer of CPU architecture and VLSI design exploration. This repository brings together every stage of the hardware design flow — from register-transfer level (RTL) description through verification, and extending toward physical implementation.
 
-## Designs
+## Contents
 
-| Design | Status | Description |
-|--------|--------|-------------|
+| Component | Status | Description |
+|-----------|--------|-------------|
 | [Single-Cycle CPU](./single-cycle-cpu/) | Complete | RV32I single-cycle Harvard architecture, verified against a lockstep golden model and hand-derived final-state oracle |
+| [ALU](./ALU/) | Complete | Parameterized N-bit ripple-carry ALU (slice + MSB), supporting AND, OR, ADD, SUB, SLT, NOR, and NAND; verified against a behavioral oracle |
 | Pipelined CPU | Planned | 5-stage pipeline with hazard detection and forwarding |
 
 ## What's Inside
