@@ -1,4 +1,4 @@
-# RISC-V CPU Design
+# Silicon From Scratch
 
 A centralized collection of RISC-V processor designs and fundamental building blocks of digital design built from the ground up, documenting my summer of CPU architecture and VLSI design exploration. This repository brings together every stage of the hardware design flow — from register-transfer level (RTL) description through verification, and extending toward physical implementation.
 
