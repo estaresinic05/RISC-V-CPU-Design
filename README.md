@@ -24,7 +24,7 @@ Students, hobbyists, career-switchers, tinkerers, and the merely curious — you
 
 This repository is paired with a companion website where the same material lives in a graphical, browsable setting — including **interactive learning content** designed to let you experiment with these concepts directly in your browser.
 
-🔗 **[https://estaresinic05.github.io/silicon-from-scratch-site](#)** *(replace with your live URL)*
+🔗 **[https://estaresinic05.github.io/silicon-from-scratch-site](#)**
 
 Use the repo to read, clone, and run the real designs; use the website to explore the ideas visually and play with the interactive demos.
 
